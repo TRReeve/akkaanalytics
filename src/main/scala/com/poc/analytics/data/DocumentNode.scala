@@ -1,7 +1,7 @@
-package main.scala.com.permutive.analytics.data
+package main.scala.com.poc.analytics.data
 
 import akka.actor.{Actor, ActorRef}
-import main.scala.com.permutive.analytics.data.ApiFormats._
+import main.scala.com.poc.analytics.data.ApiFormats
 import org.joda.time
 import org.joda.time.DateTime
 import spray.json._

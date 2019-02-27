@@ -1,4 +1,4 @@
-package com.permutive.analytics.messaging
+package com.poc.analytics.messaging
 
 /** Concurrency **/
 import concurrent.Future, concurrent.ExecutionContext.Implicits.global
