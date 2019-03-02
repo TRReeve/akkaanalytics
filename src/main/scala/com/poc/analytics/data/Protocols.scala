@@ -1,4 +1,4 @@
-package main.scala.com.poc.analytics.data
+package main.scala.com.poc.analytics
 
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat

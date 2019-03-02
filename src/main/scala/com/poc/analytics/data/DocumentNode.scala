@@ -1,10 +1,10 @@
-package main.scala.com.poc.analytics.data
+package main.scala.com.poc.analytics
 
 import akka.actor.{Actor, ActorRef}
-import main.scala.com.poc.analytics.data.ApiFormats
+import org.joda.time._
 import org.joda.time
-import org.joda.time.DateTime
 import spray.json._
+import ApiFormats._
 
 class DocumentNode(actordocumentid: String, supervisor: ActorRef) extends Actor {
 

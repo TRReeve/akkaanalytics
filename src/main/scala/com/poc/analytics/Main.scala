@@ -1,9 +1,9 @@
-package com.permutive.analytics
+package com.poc.analytics
 
 import akka.actor.{ActorSystem, Props}
 import akka.util.Timeout
-import com.permutive.analytics.messaging.{FileMessageQueue, ReadMessage}
-import main.scala.com.permutive.analytics.data.{IORouter, KpiRequest, OrphanFlush}
+import com.poc.analytics.messaging._
+import main.scala.com.poc.analytics.{IORouter,KpiRequest,OrphanFlush}
 import org.joda.time.DateTime
 
 import scala.concurrent.duration._
@@ -19,7 +19,7 @@ object Main {
 
   implicit val system = ActorSystem("akka-analytics")
   implicit val executionContext = system.dispatcher
-  implicit val timeout = Timeout(conf.getInt("akkaanalytics.timeout") seconds)
+  implicit val timeout = Timeout(5 seconds)
 
   def main(args: Array[String]): Unit = {
 
@@ -27,11 +27,10 @@ object Main {
       * Initialises actors and system scheduler for Async Actors.
       **/
 
-
-    val readfrequency = conf.getInt("akkaanalytics.readfrequency")
-    val flushorphans = conf.getInt("akkaanalytics.flushorphans")
-    val reportsschedule = conf.getInt("akkaanalytics.reportsschedule")
-    val messages_location = conf.getString("akkaanalytics.loglocation")
+    val readfrequency = 5
+    val flushorphans = 30
+    val reportsschedule = 10
+    val messages_location = "test-visit-messages.log"
 
     //using dummy time of when the log starts
     val current_time = new DateTime("2015-05-18T23:55:49.033Z").toDateTimeISO

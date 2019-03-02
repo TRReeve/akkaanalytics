@@ -1,9 +1,9 @@
-package main.scala.com.permutive.analytics.data
+package main.scala.com.poc.analytics
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.util.Timeout
-import com.permutive.analytics.messaging._
-import main.scala.com.permutive.analytics.data.ApiFormats._
+import com.poc.analytics.messaging._
+import ApiFormats._
 import spray.json._
 
 import scala.concurrent.duration._
