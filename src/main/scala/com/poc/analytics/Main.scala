@@ -5,13 +5,8 @@ import akka.util.Timeout
 import com.poc.analytics.messaging._
 import main.scala.com.poc.analytics.{IORouter,KpiRequest,OrphanFlush}
 import org.joda.time.DateTime
-
 import scala.concurrent.duration._
 import com.typesafe.config.ConfigFactory
-
-
-
-
 
 object Main {
 
@@ -62,6 +57,5 @@ object Main {
 
     println("Shutting Down")
     system.shutdown()
-
   }
 }
